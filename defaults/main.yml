@@ -1,0 +1,31 @@
+---
+##########################
+# operator user
+
+operator_user: dragon
+operator_group: "{{ operator_user }}"
+
+##########################
+# docker
+
+docker_registry: index.docker.io
+
+##########################
+# cephclient
+
+cephclient_install_type: container
+
+cephclient_configuration_directory: /opt/cephclient/configuration
+cephclient_data_directory: /opt/cephclient/data
+cephclient_docker_compose_directory: /opt/cephclient
+
+cephclient_tag: nautilus
+cephclient_image: "{{ docker_registry }}/osism/cephclient:{{ cephclient_tag }}"
+
+cephclient_mons: []
+cephclient_keyring: ""
+cephclient_keyring_name: client.admin
+
+cephclient_container_name: cephclient
+
+cephclient_network: 172.31.100.0/28
