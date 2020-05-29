@@ -1,10 +1,23 @@
 ---
-- name: Playbook for role testing
+- name: Playbook for role testing - container
   hosts: all
   connection: paramiko
 
   vars:
     ansible_ssh_user: dragon
+    cephclient_install_type: container
+
+  roles:
+    - role: ansible-cephclient
+
+- name: Playbook for role testing - package
+  hosts: all
+  connection: paramiko
+
+  vars:
+    ansible_ssh_user: dragon
+    cephclient_install_type: package
+    cephclient_configure_repository: yes
 
   roles:
     - role: ansible-cephclient
