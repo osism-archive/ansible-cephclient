@@ -1,7 +1,6 @@
 # Ansible osism.cephclient
 
 [![Build Status](https://travis-ci.org/osism/ansible-cephclient.svg?branch=master)](https://travis-ci.org/osism/ansible-cephclient)
-[![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-osism.cephclient-blue.svg)](https://galaxy.ansible.com/osism/cephclient/)
 ![Ansible 2.8](https://img.shields.io/badge/Ansible-2.8-green.png?style=flat)
 ![Ansible 2.9](https://img.shields.io/badge/Ansible-2.9-green.png?style=flat)
 ![Ubuntu 18.04](https://img.shields.io/badge/Ubuntu-18.04-orange.png?style=flat)
