@@ -11,7 +11,7 @@
     group: "{{ operator_group }}"
     mode: 0750
   become: true
-  with_items:
+  loop:
     - "{{ cephclient_configuration_directory }}"
     - "{{ cephclient_data_directory }}"
     - "{{ cephclient_docker_compose_directory }}"
@@ -23,7 +23,7 @@
     mode: 0640
     owner: "{{ operator_user }}"
     group: "{{ operator_group }}"
-  with_items:
+  loop:
     - src: ceph.conf.j2
       dest: "{{ cephclient_configuration_directory }}/ceph.conf"
 
@@ -74,7 +74,7 @@
     owner: "{{ operator_user }}"
     group: "{{ operator_group }}"
   become: true
-  with_items:
+  loop:
     - ceph
     - ceph-authtool
     - crushtool
@@ -88,7 +88,7 @@
   changed_when: false
   failed_when: result.rc != 0
   become: true
-  with_items:
+  loop:
     - ceph
     - rados
     - radosgw-admin

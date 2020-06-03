@@ -27,7 +27,7 @@
     owner: root
     group: root
   become: true
-  with_items:
+  loop:
     - src: ceph.conf.j2
       dest: "/etc/ceph/ceph.conf"
 
