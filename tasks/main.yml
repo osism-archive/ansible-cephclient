@@ -1,3 +1,0 @@
----
-- name: Include tasks
-  include: "{{ cephclient_install_type }}-{{ ansible_os_family }}.yml"
